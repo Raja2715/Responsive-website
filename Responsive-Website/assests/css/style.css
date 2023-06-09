@@ -1,0 +1,579 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+}
+
+a,
+a:hover {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* header and navbar */
+.header {
+    background: rgba(0, 0, 0, 0.414);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    transition: all 0.5s;
+}
+
+nav {
+    padding: 5px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav a {
+    color: #fff;
+}
+
+.logo a {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+}
+
+.logo img {
+    width: 70px;
+    margin-right: 10px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0px;
+}
+
+.navbar-menu li a:hover,
+.navbar-menu .active {
+    border-bottom: 3px solid yellow;
+}
+
+.navbar-menu li {
+    padding: 15px 20px;
+    font-size: 16px;
+}
+
+.hamburger {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    .navbar-menu {
+        display: inline-block;
+        background: rgba(0, 0, 0, 0.855);
+        z-index: 999;
+    }
+
+    nav ul {
+        position: fixed;
+        top: 5rem;
+        width: 100%;
+        height: 100vh;
+        text-align: center;
+        left: -100%;
+        transition: 1s;
+    }
+
+    nav ul.slide {
+        left: 0;
+        transition: 1s;
+    }
+
+    nav ul li:hover {
+        background: black;
+        border-bottom: 1px solid white;
+    }
+
+    nav ul li:hover a {
+        color: yellow;
+        border: none !important;
+    }
+
+    .navbar-menu .active {
+        border: none !important;
+    }
+
+    .hamburger {
+        display: inline;
+        float: right;
+        padding-right: 2px;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 24px;
+        height: 4px;
+        background-color: #fff;
+        margin-bottom: 5px;
+        display: block;
+    }
+}
+
+/* Carousel */
+
+#carousel-description {
+    left: 5.5%;
+    padding-bottom: 50px;
+    text-align: initial;
+}
+
+#carousel-description h5 {
+    font-size: 25px;
+    font-weight: 400;
+}
+
+#carousel-description a {
+    padding: 8px 40px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+#carousel-description a:hover {
+    background-color: #fff;
+    color: black;
+}
+
+/* BMW M5 */
+
+.BMW-M5 {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin: 5rem auto 2rem;
+}
+
+.BMW-M5 .M5-img {
+    flex: 1 1 21rem;
+}
+
+.BMW-M5 .M5-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.BMW-M5 .M5-text {
+    flex: 1 1 21rem;
+}
+
+.BMW-M5 .M5-text h2 {
+    font-size: 1.7rem;
+    display: inline-block;
+}
+
+.BMW-M5 .M5-text span {
+    font-weight: 500;
+    color: black;
+}
+
+.BMW-M5 .M5-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+}
+
+.BMW-M5 .M5-text a {
+    color: #fff;
+    background-color: red;
+    border: 1px solid red;
+}
+
+.BMW-M5 .M5-text a:hover {
+    color: black;
+    background-color: #fff;
+}
+
+.BMW-M5 .M5-text a:focus {
+    box-shadow: none;
+}
+
+/* Cars Container */
+
+.cars {
+    padding: 6% 3% 0%;
+}
+
+.cars .heading {
+    text-align: center;
+}
+
+.cars .heading h2 {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.heading span {
+    font-weight: 500;
+    font-size: 1.5rem;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.cars-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.cars-container .box {
+    flex: 1 1 17rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.cars-container .box img {
+    width: 80%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.cars-container .box img:hover {
+    transform: scale(1.1);
+    transition: 0.5s;
+}
+
+.cars-container .box h2 {
+    font-size: 1rem;
+    padding: 22px 5px 0px 5px;
+    border-radius: 0.5rem;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.cars-container .box h2 span {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.cars-container .box a{
+    color: white;
+    padding: 8px 15px;
+    background-color: black;
+    margin-top: 3%;
+    font-size: 13px;
+    border: 1px solid black;
+}
+
+.cars-container .box a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* BMW Services */
+
+.services {
+    padding-top: 5rem;
+}
+
+.service-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    justify-content: center;
+}
+
+.services .heading {
+    text-align: center;
+}
+
+.services .heading h2 {
+    padding-top: 1rem;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.service-text {
+    flex: 1 1 21rem;
+    text-align: center;
+}
+
+.service-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.service-text h4,
+.service-text h2 {
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.service-text h3 {
+    font-weight: 500;
+    font-size: 1.5rem;
+    text-align: justify;
+    width: 100%;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+
+.service-text p {
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-top: 3%;
+    text-align: justify;
+    width: 100%;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.service-text-img {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9%;
+}
+
+.service-text-img img {
+    width: 40%;
+    height: 40%;
+    margin: 2% 10% 3% 0%;
+}
+
+.service-text a {
+    color: #fff;
+    background-color: red;
+    border: 1px solid red;
+}
+
+.service-text a:hover {
+    color: black;
+    background-color: #fff;
+}
+
+.service-text a:focus {
+    box-shadow: none;
+}
+
+/* About Section */
+
+.About {
+    padding-top: 6rem;
+}
+
+.About .heading {
+    text-align: center;
+}
+
+.About .heading h2 {
+    padding-bottom: 2rem;
+    font-family: 'IBM Plex Serif', serif;
+}
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.about .About-img {
+    flex: 1 1 21rem;
+}
+
+.about .About-img img {
+    width: 100%;
+    height: 100%;
+}
+
+.about .About-text {
+    flex: 1 1 15rem;
+    margin: 3rem;
+}
+
+.about .About-text h1 {
+    text-transform: uppercase;
+}
+
+.about .About-text p {
+    font-size: 0.938rem;
+    margin: 0.5rem 0 1.4rem;
+    text-align: justify;
+}
+
+.about .About-text a {
+    color: #fff;
+    background-color: red;
+    border: 1px solid red;
+}
+
+.about .About-text a:hover {
+    color: black;
+    background-color: #fff;
+}
+
+.about .About-text a:focus {
+    box-shadow: none;
+}
+
+/* Contact */
+
+.contact {
+    background: black;
+    Padding-top: 6rem;
+    Padding-bottom: 2.5rem;
+}
+
+.section-title h3 {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-family: 'IBM Plex Serif', serif;
+    color: #fff;
+}
+
+.contact .php-email-form {
+    width: 100%;
+    background: black;
+}
+
+.contact .php-email-form .form-group {
+    padding-bottom: 8px;
+}
+
+.contact .php-email-form input,
+.contact .php-email-form textarea {
+    border-radius: 0;
+    box-shadow: none;
+    font-size: 14px;
+}
+
+.contact .php-email-form input:focus,
+.contact .php-email-form textarea:focus,
+.contact .php-email-form select:focus {
+    border-color: #fa0303;
+}
+
+.contact .php-email-form input {
+    height: 44px;
+}
+
+.contact .php-email-form select {
+    height: 44px;
+    box-shadow: none;
+    border-radius: 0px;
+    font-size: 13px;
+    color: #495057;
+}
+
+.contact .php-email-form select option {
+    border-radius: 0px;
+    font-size: 15px;
+}
+
+.contact .php-email-form textarea {
+    padding: 10px 12px;
+}
+
+.contact .php-email-form button[type=submit] {
+    background: red;
+    border: 0;
+    padding: 10px 28px;
+    color: #fff;
+    transition: 0.4s;
+    border: 1px solid red;
+}
+
+.contact .php-email-form button[type=submit]:hover {
+    background: #fff;
+    color: black;
+}
+
+/* Footer */
+
+.footer {
+    background: #f6f6f6;
+    color: black;
+    border-top: 2px solid red;
+    padding: 4rem 4rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.footer-container .logo {
+    color: black;
+    margin-bottom: 1rem;
+}
+
+.footer-container .footer-box {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-container .footer-box h3 {
+    text-transform: uppercase;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+}
+
+.social a {
+    font-size: 24px;
+    color: black;
+    margin-right: 1rem;
+}
+
+.social a:hover {
+    color: red;
+}
+
+.footer-box h3 {
+    font-size: 1.1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.footer-box a {
+    color: black;
+    margin-bottom: 10px;
+}
+
+.footer-a a {
+    font-size: 15px;
+}
+
+.footer-box a:hover {
+    color: red;
+}
+
+.copyright {
+    padding: 20px;
+    text-align: center;
+    color: black;
+    background: #f6f6f6;
+}
+
+@media (max-width: 1040px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: 0.5fr 1fr;
+    }
+
+    .copyright {
+        text-align: initial;
+    }
+}
